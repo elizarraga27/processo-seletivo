@@ -1,0 +1,119 @@
+1) feito em javascript
+
+let INDICE = 13
+let SOMA = 0
+let K = 0
+
+while( K<INDICE ){
+    K = K + 1
+    SOMA = SOMA + K
+}
+
+console.log(SOMA);
+
+Ao final do processamento, qual será o valor da variável SOMA?
+91
+
+
+2)feito em phyton
+
+Termo1 = int(0)
+Termo2 = int(1)
+Termo3 = int(0)
+print ('-' *42)
+print (' ' *3, 'Consulta da Sequência de Fibonacci')
+print ('-' *42)
+Valor = int(input('Digite um número: '))
+while Valor > Termo3:
+Termo3 = Termo1 + Termo2
+Termo1 = Termo2
+Termo2 = Termo3
+if Valor == 0 or Valor == 1:
+print ('O número faz parte da sequência de Fibonacci.')
+elif Valor == Termo3:
+print ('O número faz parte da sequência de Fibonacci.')
+else:
+print ('O número digitado não faz parte da sequência de Fibonacci.')
+
+
+
+
+4) em javascript
+
+let SP = 67836.43
+let RJ = 36678.66
+let MG = 29229.88
+let ES = 27165.48
+let Outros = 19849.53
+
+    total = SP + RJ + MG + ES + Outros
+    porcentagemSP = (SP * 100)/total
+    porcentagemRJ = (RJ * 100)/total
+    porcentagemMG = (MG * 100)/total
+    porcentagemES = (ES * 100)/total
+    porcentagemOutros = (Outros * 100)/total
+    
+    console.log( "o porcentagem do SP é:", porcentagemSP)
+    console.log("o porcentagem do RJ é:", porcentagemRJ)
+    console.log("o porcentagem do MG é:", porcentagemMG)
+    console.log("o porcentagem do ES é:", porcentagemES)
+    console.log("o porcentagem do Outros é:", porcentagemOutros)
+    
+    tambem fiz em phyton com entrada
+    
+    # Definindo os estados para uma melhor manipulação:
+e = ['SP', 'RJ', 'MG', 'ES', 'OUTROS']
+
+faturamento = list()
+for c in e:
+    # Capturando e tratando os valores digitados:
+    while True:
+        try:
+            v = float(input(f'Digite o faturamento mensal de {c}: '))
+            if v < 0:
+                print('\033[31mValor INVÁLIDO! Digite apenas valores maiores ou iguais a "0":\033[m')
+            break
+        except:
+            print('\033[31mValor INVÁLIDO! Digite apenas valores reais!\033[m')
+
+    # Armazenando os valores digitados na lista faturamento
+    faturamento.append(v)
+
+# Calculando o faturamento total da distribuidora:
+faturamento_total = sum(faturamento)
+print(f'\033[32mO faturamento total da Distribuidora foi: R$ {faturamento_total:.2f}'.replace('.', ','))
+
+# Calculando e exibindo o percentual relativo de cada filial de cada estado:
+cont = 0
+for i in faturamento:
+    cont += 1
+    percentual = ((i / faturamento_total) * 100)
+    print(f'O percentual de faturamento de {e[cont - 1]} é: {percentual:.2f} %')
+    
+    
+    5)
+    
+    function reemplazarCaracteres(texto) {
+    texto = texto.split('');
+
+    for(let i = 0; i < texto.length; ++i) {
+        switch(texto[i]) {
+            case 'z':
+                texto[i] = 'a';
+                break;
+            case 'Z':
+                texto[i] = 'A';
+                break;
+            default:
+                texto[i] = String.fromCharCode(texto[i].charCodeAt(0) + 1);
+        }
+    }
+
+    return texto.join('');
+}
+
+console.log(reemplazarCaracteres('ABC'));   // BCD
+console.log(reemplazarCaracteres('ABCXYZ'));   // BCDYZA
+
+
+
